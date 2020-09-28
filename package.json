@@ -1,0 +1,23 @@
+{
+  "name": "basicblogapi",
+  "version": "1.0.0",
+  "description": "An API for a personal blog site",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevenabaco/BlogAppApi.git"
+  },
+  "author": "Steven Abaco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevenabaco/BlogAppApi/issues"
+  },
+  "homepage": "https://github.com/stevenabaco/BlogAppApi#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "multer": "^1.4.2"
+  }
+}
