@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+const Post = require("./api/models/posts");
+const postsData = new Post();
 
 const posts = [{
     "id": "#1581461442206",
