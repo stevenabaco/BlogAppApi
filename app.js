@@ -1,9 +1,19 @@
 const express = require("express");
 const app = express();
 
-app.get("/", (req, res) => {
-    res.status(200).send("The backend server is up and running!");
+const posts = [{
+    "id": "#1581461442206",
+    "title": "This is a new Blog Post",
+    "content": "This is the content! ",
+    "post_image": "uploads/post-image-1581461442199.jpg",
+    "added_date": "1581461442206"
+}]
+
+app.get("/api/posts", (req, res) => {
+    res.status(200).send(posts);
 })
+
+
 
 
 
