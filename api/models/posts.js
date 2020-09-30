@@ -5,7 +5,7 @@ class Post {
     readData() {
         let rawdata = fs.readFileSync(PATH);
         let posts = JSON.parse(rawdata);
-        return rawdata
+        return posts;
     }
 
     get() {
@@ -18,11 +18,20 @@ class Post {
 
     }
 
-    add() {
+    add(newPost) {
         // ** Add new Post ** //
+        const currentPosts = this.readData();
+        currentPosts.unshift(newPost);
+        this.storeData(currentPosts);
+        }
 
+    storeData(rawdata) {
+        //** store new data */
+        let data = JSON.stringify(rawdata);
+        fs.writeFileSync(PATH, data)
     }
 
+    
     
 }
 
